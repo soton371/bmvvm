@@ -1,6 +1,6 @@
 
 import 'package:bmvvm/cubits/internet_cubit.dart';
-import 'package:bmvvm/views/v_internet_check.dart';
+import 'package:bmvvm/views/signin/v_signin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: VInternetCheck(),
+        home: VSignIn()
 
       ),
     );
