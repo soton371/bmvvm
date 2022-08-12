@@ -6,6 +6,6 @@ class SignInValidState extends SignInState{}
 
 
 class SignInErrorState extends SignInState{
-  String error;
-  SignInErrorState(this.error);
+  String errorMessage;
+  SignInErrorState(this.errorMessage);
 }

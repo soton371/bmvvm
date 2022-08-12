@@ -4,8 +4,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignInBloc extends Bloc<SignInEvent,SignInState>{
   SignInBloc():super(SignInInitialState()){
-    on<SignInTextChangeEvent>((event, emit) => null);
+    on<SignInTextChangeEvent>((event, emit) {
+      if(event.emailValue.isEmpty){
+        emit(SignInErrorState('Please enter email'));
+      }
+      if(event.passwordValue.length<6){
+        emit(SignInErrorState('Please enter 7 digit number'));
+      }
+    });
 
-    on<SignInSubmitEvent>((event, emit) => null);
+    on<SignInSubmitEvent>((event, emit) {
+
+    });
   }
 }
